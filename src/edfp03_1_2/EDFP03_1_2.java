@@ -15,7 +15,19 @@ public class EDFP03_1_2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        LinkedStack<Integer> a=new LinkedStack<>();
+//        System.out.println(a.isEmpty());
+        a.push(1);
+        a.push(2);
+        a.push(3);
+        System.out.println(a.toString());
+        System.out.println(a.peek());
+        a.push(4);
+        System.out.println(a.size());
+        System.out.println(a.toString());
+//        System.out.println(a.isEmpty());
+        a.pop();
+        System.out.println(a.toString());
     }
     
 }
