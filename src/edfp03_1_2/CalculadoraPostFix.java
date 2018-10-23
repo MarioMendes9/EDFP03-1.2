@@ -19,7 +19,6 @@ public class CalculadoraPostFix {
     }
 
     
-    
     public int calculate(String n){
         
         String[] parts=n.split(" ");
@@ -33,9 +32,9 @@ public class CalculadoraPostFix {
                     return 0;
                 }
                 else{
-                int k=a.pop();
-                int j=a.pop();
-                a.push(k+j);
+                int oper2=a.pop();
+                int oper1=a.pop();
+                a.push(oper2+oper1);
                 }
                 break;
             case "-":
@@ -44,9 +43,9 @@ public class CalculadoraPostFix {
                     return 0;
                 }
                 else{
-                int k=a.pop();
-                int j=a.pop();
-                a.push(k-j);
+                int oper2=a.pop();
+                int oper1=a.pop();
+                a.push(oper1-oper2);
                 }
                 break;
             case "/":
@@ -55,9 +54,9 @@ public class CalculadoraPostFix {
                     return 0;
                 }
                 else{
-                int k=a.pop();
-                int j=a.pop();
-                a.push(j/k);
+                int oper2=a.pop();
+                int oper1=a.pop();
+                a.push(oper1/oper2);
                 }
                 break;
             case "*":
@@ -66,9 +65,9 @@ public class CalculadoraPostFix {
                     return 0;
                 }
                 else{
-                int k=a.pop();
-                int j=a.pop();
-                a.push(k*j);
+                int oper2=a.pop();
+                int oper1=a.pop();
+                a.push(oper2*oper1);
                 }
                 break;
             default :
@@ -86,6 +85,7 @@ public class CalculadoraPostFix {
         
         
     }
+
     
     
 }
